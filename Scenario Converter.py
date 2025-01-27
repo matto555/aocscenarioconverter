@@ -90,9 +90,11 @@ class Application(tk.Frame):
                 "FFFFFF": {"type": 0, "name": "water", "value": 0},
                 "000000": {"type": 1, "name": "basic land", "value": 10},
                 "CCCCCC": {"type": 2, "name": "crossing", "value": 0},
-                "666666": {"type": 3, "name": "desert/tundra", "value": 1},
+                "666666": {"type": 3, "name": "desert", "value": 1},
                 "333333": {"type": 4, "name": "hills", "value": 3},
-                "999999": {"type": 5, "name": "mountains", "value": 0}
+                "999999": {"type": 5, "name": "mountains", "value": 0},
+                "1F1F1F": {"type": 6, "name": "forest", "value": 8},
+                "808080": {"type": 7, "name": "tundra", "value": 2}
             }
 
             processed_pixels = []
@@ -151,7 +153,7 @@ class Application(tk.Frame):
 
             return nation_properties
 
-        terrain_values = {0: 0, 1: 10, 2: 0, 3: 1, 4: 3, 5: 0}
+        terrain_values = {0: 0, 1: 10, 2: 0, 3: 1, 4: 3, 5: 0, 6: 8, 7: 2}
         nation_properties = calculate_nation_properties(terrain_data, borders_data, terrain_values)
 
         data = {
